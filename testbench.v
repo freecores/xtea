@@ -1,3 +1,47 @@
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+////  XTEA IP Core                                                ////
+////                                                              ////
+////  This file is part of the xtea project                       ////
+////  http://www.opencores.org/projects.cgi/web/xtea/overview     ////
+////                                                              ////
+////  Test-bench for the XTEA encryption algorithm.               ////
+////                                                              ////
+////  TODO:                                                       ////
+////    * Update for new combined encipher/decipher module        ////
+////    * Tidy                                                    ////
+////    * Add interconnections                                    ////
+////                                                              ////
+////  Author: David Johnson, dj@david-web.co.uk                   ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+//// Copyright (C) 2006 David Johnson                             ////
+////                                                              ////
+//// This source file is free software; you can redistribute it   ////
+//// and/or modify it under the terms of the GNU Lesser General   ////
+//// Public License as published by the Free Software Foundation; ////
+//// either version 2.1 of the License, or (at your option) any   ////
+//// later version.                                               ////
+////                                                              ////
+//// This source is distributed in the hope that it will be       ////
+//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
+//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
+//// PURPOSE.  See the GNU Lesser General Public License for more ////
+//// details.                                                     ////
+////                                                              ////
+//// You should have received a copy of the GNU Lesser General    ////
+//// Public License along with this source; if not, write to the  ////
+//// Free Software Foundation, Inc., 51 Franklin Street, Fifth    ////
+//// Floor, Boston, MA  02110-1301  USA                           ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+//
+// CVS Revision History
+//
+// $Log: not supported by cvs2svn $
+//
+
 module cipher_testbench (clock, reset, all_done_encipher, all_done_decipher, data_out_encipher1, data_out_encipher2, data_out_decipher1, data_out_decipher2, data_in_encipher1, data_in_encipher2, data_in_decipher1, data_in_decipher2, key_out, result, reset_out);
 
 input clock, reset, all_done_encipher, all_done_decipher;
