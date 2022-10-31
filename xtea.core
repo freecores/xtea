@@ -1,0 +1,36 @@
+CAPI=2:
+
+name : ::xtea:0
+
+filesets:
+  rtl:
+    files:
+      - xtea.v : {file_type : verilogSource}
+
+  tb:
+    files:
+      - testbench.v : {file_type : verilogSource}
+
+  sky130:
+    files: [data/sky130.tcl : {file_type : tclSource}]
+
+targets:
+  default:
+    filesets: [rtl]
+
+  lint:
+    default_tool : verilator
+    filesets : [rtl]
+    tools:
+      verilator: {mode: lint-only}
+    toplevel: xtea
+
+  sim:
+    default_tool : icarus
+    filesets : [rtl, tb]
+    toplevel : cipher_testbench
+
+  sky130:
+    default_tool : openlane
+    filesets: [rtl, sky130]
+    toplevel : xtea
